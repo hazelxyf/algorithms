@@ -1,0 +1,16 @@
+public class Solution {
+    public void ReverseString(char[] s)
+    {
+        char temp;
+        int end = s.Length - 1;
+        int start = 0;
+        
+        while (end > start) {
+            temp = s[start];
+            s[start] = s[end];
+            s[end] = temp;
+            end--;
+            start++;
+        }
+    }
+}
