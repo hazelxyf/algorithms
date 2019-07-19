@@ -1,0 +1,17 @@
+public class Solution 
+{
+    public int[] TwoSum(int[] nums, int target) 
+    {
+        int[] twoSum = new int[2];
+        Dictionary<int, int> numberIndex = new Dictionary<int, int>();
+        for (int i = 0; i < nums.Length; i++) {
+            if (numberIndex.ContainsKey(target - nums[i]))
+                {
+                    twoSum[1] = i;
+                    twoSum[0] = numberIndex[target-nums[i]];
+                }
+                numberIndex[nums[i]] = i;
+        }
+        return twoSum;
+    }
+}
